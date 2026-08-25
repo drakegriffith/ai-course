@@ -3,4 +3,8 @@
 SHOOT-SCRIPT.md
 COURSE-0-DECK.md
 make_diagrams.py
+build_deck.sh
+diagrams.ipynb
+.ipynb_checkpoints/
+.venv/
 00-terminal-fluent/images/
