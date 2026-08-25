@@ -8,11 +8,11 @@
 ## Why this exists
 
 Every lesson in Course 1 assumes you can say "clone the repo" without flinching.
-This lesson defines the eight words that sentence depends on, then has you do
+This lesson defines the five words that sentence depends on, then has you do
 the one move you need: copying this course to your machine. Making changes and
 saving history come later, live, in Course 1 episode 4. Here you only read.
 
-## The eight words
+## The five words
 
 | Word | Plain English |
 |------|---------------|
@@ -21,9 +21,14 @@ saving history come later, live, in Course 1 episode 4. Here you only read.
 | clone | Copy a repo from GitHub onto your machine, history included |
 | push | Send your new commits up to GitHub |
 | pull | Bring down commits someone else pushed |
-| README | The file GitHub shows first; the repo's front page |
-| fork | Your own copy of someone else's repo, under your account |
-| issue | A public note on a repo: bug report, question, request |
+
+### Words you will meet later
+
+Not on the pass test. You only need to recognize them when GitHub uses them.
+
+- **README** is the file GitHub shows first, the repo's front page.
+- **fork** is your own copy of someone else's repo, under your account.
+- **issue** is a public note on a repo: a bug report, a question, a request.
 
 Git is the tool that tracks the history on your machine. GitHub is the website
 where repos are shared. Same relationship as email and Gmail: one is the thing,
@@ -59,7 +64,7 @@ ls
 
 ## You can move on when
 
-You can define all eight words in plain English, and you have this course
+You can define all five words in plain English, and you have this course
 cloned, entered, and listed from your own terminal.
 
 *Verify the clone URL against the published repo before posting this lesson.*
