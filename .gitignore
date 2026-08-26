@@ -8,3 +8,7 @@ diagrams.ipynb
 .ipynb_checkpoints/
 .venv/
 00-terminal-fluent/images/
+.DS_Store
+00-terminal-fluent/script/
+00-terminal-fluent/documents/
+00-terminal-fluent/deck/

@@ -4,7 +4,7 @@ One row per course created. The message is the stream; this file is the record.
 
 | # | Course | Episodes | Cadence | Platform | Status | Detail |
 |---|--------|----------|---------|----------|--------|--------|
-| 0 | Terminal Fluent (prerequisite mini-course) | 4 written lessons + 2 companion videos | none (evergreen) | Markdown + YouTube | Drafted 2026-08-25 | 00-terminal-fluent/README.md |
+| 0 | Terminal Fluent (prerequisite mini-course) | 2 written lessons + 2 companion videos | none (evergreen) | Markdown + YouTube | Drafted 2026-08-25 | 00-terminal-fluent/README.md |
 | 1 | How to Use AI Like a Software Engineer | 30 core + 10-15 solo briefs (40-45 total) | Tue/Thu live | Twitch live, YouTube cuts | Planned, panel-reviewed 2026-08-25 | Below |
 
 ---
