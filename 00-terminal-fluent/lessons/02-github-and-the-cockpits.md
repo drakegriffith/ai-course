@@ -108,11 +108,49 @@ cd 02-claude
 claude
 ```
 
-If `claude` is not found, install it once with
-`npm install -g @anthropic-ai/claude-code`. `npm` is Node's installer, and
-`-g` makes the program available from any folder; if `npm` itself is missing,
-install Node.js from nodejs.org first. Logging in happens once, in the
-browser.
+If `claude` is not found, install it once with:
+
+```
+npm install -g @anthropic-ai/claude-code
+```
+
+### Taking that line apart
+
+Three unfamiliar words, worth taking apart once so they stop being scary.
+
+**Node**, or Node.js, is a program that runs JavaScript outside a web browser.
+JavaScript used to live only on web pages; Node let it run on your machine like
+any other program, and a lot of command line tools got built on top of it,
+including this one. Installing Node is installing the engine a certain class of
+tool needs in order to start. If `npm` is missing, install Node.js from
+nodejs.org and npm arrives with it.
+
+**npm** ships with Node and is Node's app store, where the package you want is
+sitting. `npm install` means fetch that package and set it up.
+
+**`-g`** stands for global, and it is the piece worth remembering.
+
+### Global install, local session
+
+You are standing in `02-claude`, so the fair question is whether this installs
+Claude Code into that folder. It does not, and `-g` is why. The program lands
+on your whole computer once, and afterward `claude` runs from any folder on the
+machine. You install it one time, not one time per project.
+
+So why walk into a folder first? Because installing and starting are two
+different acts. Installing puts the program on your computer. Starting it
+decides which folder it looks at: the files there, and the `CLAUDE.md` sitting
+there. Same program, different desk.
+
+A plumber owns one set of tools and drives them to whichever house called.
+`npm install -g` buys the tools. Walking into a folder and running `claude`
+picks today's house. Nobody buys a new wrench per house.
+
+Global is what you want here and in most cases later. A tool installed into one
+folder works only in that folder, and a year from now you will not remember
+which folders have it.
+
+Logging in happens once, in the browser.
 
 ### The two dials
 
@@ -196,8 +234,17 @@ codex
 ```
 
 `cd ../03-codex` steps out of `02-claude` and into its neighbor in one move.
-If `codex` is not found, install it with `npm install -g @openai/codex`, or
-`brew install codex` on a Mac (Homebrew is the Mac's package installer).
+If `codex` is not found, install it with `npm install -g @openai/codex`. You can
+read that line now: npm, install, global. Different vendor, different package,
+same whole-computer install.
+
+On a Mac `brew install codex` does the same job. Homebrew is a package installer
+for Mac software in general, where npm covers Node packages. Either one puts
+`codex` on your whole machine, so pick one rather than running both.
+
+Notice the order again: walk into `03-codex` first, then start the tool. The
+program is global, the session is local. Codex is reading this folder and the
+`AGENTS.md` in it, not the folder next door.
 
 | Command | Plain English |
 |---------|---------------|
