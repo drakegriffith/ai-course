@@ -10,10 +10,13 @@ it is the front door your AI tools actually use.
 
 ## Order
 
-| Lesson | File | Companion video |
-|--------|------|-----------------|
-| 1 | lessons/01-the-terminal-itself.md | Video A: the terminal itself |
-| 2 | lessons/02-github-and-the-cockpits.md | Video B: GitHub, Claude Code, Codex |
+| Lesson | File | Ends with | Video |
+|--------|------|-----------|-------|
+| 1 | lessons/01-the-terminal-itself.md | a folder you made, `ai-course`, holding your `notes.md` | about 10 min |
+| 2 | lessons/02-github-and-the-cockpits.md | the course cloned, both cockpits driven, one issue filed | one sitting |
+
+Lesson 2 opens where Lesson 1 stopped: that practice folder gets replaced by the
+real course repo.
 
 ## Follow along
 
