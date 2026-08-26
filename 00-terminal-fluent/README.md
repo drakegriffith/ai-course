@@ -13,7 +13,7 @@ it is the front door your AI tools actually use.
 | Lesson | File | Companion video |
 |--------|------|-----------------|
 | 1 | lessons/01-the-terminal-itself.md | Video A: the terminal itself |
-| 2 | lessons/02-github-and-the-cockpits.md (publishes with the video) | Video B: GitHub, Claude Code, Codex |
+| 2 | lessons/02-github-and-the-cockpits.md | Video B: GitHub, Claude Code, Codex |
 
 ## Follow along
 
