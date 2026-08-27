@@ -248,21 +248,32 @@ program is global, the session is local. Codex is reading this folder and the
 
 | Command | Plain English |
 |---------|---------------|
-| `/status` | Both dials on one screen; Claude splits them across three commands |
+| `/status` | The money dial: your plan, your model, and the limit bars with their refill times |
+| `/statusline` | The attention dial, as a switch: turn on `context-remaining` and it sits in the footer of every screen |
 | `/compact` | Same word, same job as Claude's |
-| `/approvals` | What Codex may do without asking; the twin of Claude's `/permissions` |
+| `/permissions` | Same word, same job as Claude's: what it may do without asking |
 | `/model` | Pick which model answers you |
 
-One move Codex has that Claude lacks a one-word version of: quit the session,
-run `codex resume`, and it comes back where you left it.
+Codex does not show the attention dial until you ask. Run `/statusline`, type
+`context`, press space on `context-remaining`, then Enter. It reads unknown on
+an empty session and fills in after your first message. Claude gave you a
+command for the same number; Codex gives you a switch you flip once.
 
-Codex's name for a skill is a custom prompt. Create the demo one, then call it
-as `/hello` inside a `codex` session:
+Quit the session, run `codex resume`, and it comes back where you left it.
+Claude has the same move as `/resume` inside a session; Codex makes it a verb
+on the command line.
+
+Codex skills are the same file in the same shape as Claude's, in a folder next
+door. Create the demo one, then call it inside a `codex` session by typing `$`
+and picking `hello-course` from the list:
 
 ```
-mkdir -p ~/.codex/prompts
-printf 'Greet the user and state what folder they are standing in.\n' > ~/.codex/prompts/hello.md
+mkdir -p ~/.codex/skills/hello-course
+printf -- '---\nname: hello-course\ndescription: Greet the user and state what folder they are standing in.\n---\nGreet the user in one sentence and state the folder they are standing in.\n' > ~/.codex/skills/hello-course/SKILL.md
 ```
+
+The one thing that moved is the key you press: slash in Claude, dollar sign in
+Codex. The file did not change.
 
 The memory file here is `AGENTS.md`, doing what `CLAUDE.md` did next door
 under a different name. The starter copy is already there; read it with
@@ -273,14 +284,19 @@ under a different name. The starter copy is already there; read it with
 | Concept | Claude Code | Codex |
 |---------|-------------|-------|
 | Memory file the tool always reads | `CLAUDE.md` | `AGENTS.md` |
-| Reusable named routine | Skill, called as `/<name>` | Custom prompt, called as `/<name>` |
-| Gauges | `/status`, `/context`, `/usage` | `/status` |
+| Reusable named routine | Skill in `~/.claude/skills/`, called as `/<name>` | Skill in `~/.codex/skills/`, called as `$<name>` |
+| Gauges | `/usage` money, `/context` attention | `/status` money, `/statusline` switch for attention |
 | Squeeze a long session | `/compact` | `/compact` |
-| Guardrails on what it may do | `/permissions` | `/approvals` |
-| Extensions / connections | `/plugin` marketplace | MCP servers via config |
+| Guardrails on what it may do | `/permissions` | `/permissions` |
+| Extensions / connections | `/plugin`, `/mcp` | `/plugins`, `/mcp` |
 | Pick the model | `/model` | `/model` |
 
-Seven rows, two columns. Learn the row, not the column; the rows hold still.
+Seven rows, two columns. Five rows are the same word or one letter apart.
+Learn the row, not the column; the rows hold still.
+
+Checked against Claude Code 2.1.247 and codex-cli 0.150.1 on 2026-08-27. Tools
+rename commands between releases; if a name here does not match your screen,
+type `/` alone and read the menu.
 
 ## Saying something back
 
@@ -362,7 +378,7 @@ can:
 2. Move to any folder by path and list what is inside it.
 3. Start Claude Code or Codex, log in, and read your usage and context numbers.
 4. Compact a long session instead of abandoning it.
-5. Call one skill (Claude) or one custom prompt (Codex) by name.
+5. Call the `hello-course` skill in both tools: `/hello-course` in Claude, `$hello-course` in Codex.
 6. Name where your tool's memory file lives (CLAUDE.md or AGENTS.md).
 7. Define repo, commit, clone, push, and pull in plain English, and clone the
    course repo onto your machine.

@@ -37,7 +37,7 @@ You are terminal fluent for this course when, without looking anything up, you c
 2. Move to any folder by path and list what is inside it.
 3. Start Claude Code or Codex, log in, and read your usage and context numbers.
 4. Compact a long session instead of abandoning it.
-5. Call one skill (Claude) or one custom prompt (Codex) by name.
+5. Call the `hello-course` skill in both tools: `/hello-course` in Claude, `$hello-course` in Codex.
 6. Name where your tool's memory file lives (CLAUDE.md or AGENTS.md).
 7. Define repo, commit, clone, push, and pull in plain English, and clone the
    course repo onto your machine.
